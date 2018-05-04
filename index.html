@@ -1,10 +1,30 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>Electron Boilerplate</title>
-</head>
-<body>
-    <p>testings</p>
-</body>
+    <head>
+        <meta charset="utf-8">
+        <title>Aggresso</title>
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="assets/main.css" type="text/css">
+    
+        <!-- Electron Fixes (Overwrite Node Defaults) -->
+        <script>
+            window.node_require = require;
+
+            electron = require('electron')
+            remote = electron.remote
+
+            delete window.require;
+            delete window.exports;
+            delete window.module;
+        </script>
+    </head>
+    <body>
+        <div id="carousel">
+        </div>
+
+        <!-- Scripts -->
+        <script src="assets/jquery.min.js"></script>
+        <script src="assets/main.js"></script>
+    </body>
 </html>

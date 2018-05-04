@@ -23,6 +23,12 @@ const isAlreadyRunning = electron.app.makeSingleInstance(() => {
 if (isAlreadyRunning)
 	electron.app.quit();
 
+global.carousel_items = []
+
+filesystem.readdir(path.join(__dirname, "carousel"), (err, files) => {
+	global.carousel_items = files
+});
+
 function createMainWindow() {
 	const lastWindowState = Storage.get("lastWindowState") || {width: 900, height: 675};
 
@@ -37,10 +43,6 @@ function createMainWindow() {
 		show: false,
 		autoHideMenuBar: true,
 		titleBarStyle: "hidden-inset",
-		webPreferences: {
-			nodeIntegration: false,
-			webSecurity: false
-		}
 	});
 
 	browser.on("close", event => {

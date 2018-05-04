@@ -1,1 +1,15 @@
 /* Main .css for Aggresso Render Process*/
+
+/* Base Styles */
+body {
+    width: 100%;
+    padding:0;
+    margin: 0;
+    background-color: black;
+}
+
+p {
+    color: white;
+}
+
+/* Carousel */
