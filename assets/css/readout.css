@@ -1,29 +1,42 @@
 /* Alarm Clock Readout Styles .css for Aggresso Render Process*/
 
-#clock-face {
-
+#clock-face p{
+    position:fixed;
+    z-index:5;
+    font-family: "Raleway", Arial, Helvetica, sans-serif;
+    font-weight: 300;
 }
 
 #clock-time {
-
-}
-
-#clock-hours {
-
+    bottom:7vh;
+    left:5vh;
+    font-size:20vh;
+    line-height:0;
 }
 
 #clock-time-separator {
-
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
 }
 
-#clock-minutes {
+#clock-time-separator.hidden {
+    opacity: 0.2;
+}
 
+#clock-tod {
+    font-size:6vh;
 }
 
 #clock-date {
-
+    bottom:4vh;
+    left:5vh;
+    font-size:8vh;
+    line-height:0;
 }
 
 #clock-dotw {
-    
+    bottom:30vh;
+    left:5vh;
+    font-size:8vh;
+    line-height:0;
 }
