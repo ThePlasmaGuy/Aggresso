@@ -5,14 +5,18 @@
         <title>Aggresso</title>
 
         <!-- Stylesheets -->
-        <link rel="stylesheet" href="assets/main.css" type="text/css">
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css" type="text/css">
+        <link rel="stylesheet" href="assets/css/main.css" type="text/css">
+        <link rel="stylesheet" href="assets/css/carousel.css" type="text/css">
+        <link rel="stylesheet" href="assets/css/menubar.css" type="text/css">
     
         <!-- Electron Fixes (Overwrite Node Defaults) -->
         <script>
             window.node_require = require;
 
-            electron = require('electron')
-            remote = electron.remote
+            var electron = require('electron');
+            var remote = electron.remote;
+            var current_window = electron.remote.getCurrentWindow();
 
             delete window.require;
             delete window.exports;
@@ -20,11 +24,20 @@
         </script>
     </head>
     <body>
-        <div id="carousel">
+        <div id="carousel"></div> <!-- Carousel Container - Filled with images from carousel directory -->
+
+        <!-- App Menu Items -->
+        <div id="menu-bar"></div>
+        <div id="menu-buttons">
+            <div id="menu-close"><i class="fa fa-times"></i></div>
+            <div id="menu-minimize"><i class="fa fa-window-minimize"></i></div>
+            <div id="menu-settings"><i class="fa fa-cog"></i></div>
         </div>
 
         <!-- Scripts -->
-        <script src="assets/jquery.min.js"></script>
-        <script src="assets/main.js"></script>
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.mobile-events.min.js"></script>
+        <script src="assets/js/carousel.js"></script>
+        <script src="assets/js/menubar.js"></script>
     </body>
 </html>

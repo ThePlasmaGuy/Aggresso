@@ -1,0 +1,52 @@
+/* Carousel Styles .css for Aggresso Render Process*/
+
+/* Carousel */
+#carousel {
+    width: 100vw;
+    height: calc(100vh - 25px);
+    padding:0;
+    margin:0;
+    position:fixed;
+    top:25px;
+    left:0;
+    z-index:1;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: rgba(0,0,0,1);
+}
+
+.full-screen #carousel {
+    height: 100vh;
+    top:0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#carousel div {
+    width:100%;
+    height:100%;
+    padding:0;
+    margin:0;
+    position: absolute;
+    top:0;
+    left:0;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index:2;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.full-screen #carousel div {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#carousel div.active {
+    opacity:1;
+    z-index:3;
+}

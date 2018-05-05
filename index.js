@@ -42,7 +42,8 @@ function createMainWindow() {
 		title: electron.app.getName(),
 		show: false,
 		autoHideMenuBar: true,
-		titleBarStyle: "hidden-inset",
+		frame: false,
+		transparent: true,
 	});
 
 	browser.on("close", event => {
