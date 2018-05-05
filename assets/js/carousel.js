@@ -6,12 +6,21 @@ var slideshow_auto_base = 15; // Time-To-Swap
 var slideshow_auto_tracker = 20 // Initial Time-To-Swap
 
 
+// Helper Functions
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
 // Fill Carousel
-carousel_items = remote.getGlobal('carousel_items')
+carousel_items = remote.getGlobal('carousel_items');
+shuffleArray(carousel_items);
 $.each(carousel_items , function(index, val) { 
-    $('#carousel').append("<div style=\"background-image: url('carousel/" +  val + "')\"></div>")
+    $('#carousel').append("<div style=\"background-image: url('carousel/" +  val + "')\"></div>");
 });
-console.log('ADDED ' + carousel_items.length + ' IMAGES TO CAROUSEL.')
+console.log('ADDED ' + carousel_items.length + ' IMAGES TO CAROUSEL.');
 
 // Initiate first image
 $('#carousel > div').removeClass('active');
