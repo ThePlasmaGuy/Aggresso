@@ -6,9 +6,9 @@
     bottom: 3vh;
     left: 3vh;
     height: 37.5vh;
-    width: 60vh;
-    background: rgba(175, 175, 175, 0.6);
-    transition: width 0.5s;
+    width: 65vh;
+    background: rgba(165, 165, 165, 0.7);
+    transition: width 0.25s;
 }
 
 #clock-face p{
