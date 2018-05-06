@@ -87,7 +87,7 @@ function isEven(n) {
 
 
 // Clock Worker Function
-var CHours, CMinutes, CSeconds, CMonth, CTOD, CDOTW;
+var CHours, CMinutes, CSeconds, CMonth, CTOD, CDOTW, time_width;
 
 function timeProtocol() {
     
@@ -130,6 +130,8 @@ function timeProtocol() {
         $('#clock-time-separator').removeClass('hidden');
     }
     
+    time_width = (($('#clock-time').width() / $(window).height()) * 100) + 4;
+    $("#clock-face").attr('style', 'width: ' + time_width + 'vh !important;');
 }
 
 // Start Clock
