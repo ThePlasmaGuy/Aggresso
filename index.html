@@ -18,6 +18,7 @@
 
             var electron = require('electron');
             var remote = electron.remote;
+            var settings = remote.getGlobal('settings');
             var current_window = electron.remote.getCurrentWindow();
 
             delete window.require;
@@ -37,11 +38,19 @@
             <div id="menu-settings"><i class="fa fa-cog"></i></div>
         </div>
 
-        <!-- Alarm Clock Readout -->
+        <!-- Clock Time Readout -->
         <div id="clock-face">
             <p id='clock-dotw'>Saturday</p>
             <p id='clock-time'><span id='clock-hours'>06</span><span id='clock-time-separator'>:</span><span id='clock-minutes'>00</span><span id='clock-tod'>PM</span></p>
             <p id='clock-date'>May 5, 2018</p>
+        </div>
+
+        <!-- Next Alarm Readout-->
+        <div id='alarm-readout'>
+            <p id='alarm-empty'>No Alarms Set</p>
+            <p id='alarm-title'>Next Alarm: <span id='alarm-next'>None</p>
+            <p id='alarm-upcomming'>
+            </p>
         </div>
 
         <!-- Scripts -->

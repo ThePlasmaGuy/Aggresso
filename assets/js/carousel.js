@@ -2,8 +2,7 @@
 
 /* Carousel Operator */
 var next_right = true; // Which Direction to Cycle.  True = Right, False = Left
-var slideshow_auto_base = 15; // Time-To-Swap
-var slideshow_auto_tracker = 20 // Initial Time-To-Swap
+var slideshow_auto_tracker = settings.carousel_wait_time + 5 // Initial Time-To-Swap
 
 
 // Helper Functions
@@ -59,10 +58,10 @@ function auto_increase() { // Check for time and trigger slideshow if have waite
     if ( slideshow_auto_tracker <= 0 ){
       if ( next_right ) {
         next_image();
-        slideshow_auto_tracker = slideshow_auto_base;
+        slideshow_auto_tracker = settings.carousel_wait_time;
       } else {
         previous_image();
-        slideshow_auto_tracker = slideshow_auto_base;
+        slideshow_auto_tracker = settings.carousel_wait_time;
       }
     }
   }
