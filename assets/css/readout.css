@@ -7,7 +7,7 @@
     z-index: 4;
     bottom: 3vh;
     left: 3vh;
-    height: 37.5vh;
+    height: 36vh;
     width: 65vh;
     background: rgba(165, 165, 165, 0.7);
     transition: width 0.15s;
@@ -21,7 +21,7 @@
 }
 
 #clock-time {
-    bottom:-1vh;
+    bottom:-2vh;
     left:2vh;
     font-size:20.5vh;
     line-height:0;
@@ -48,14 +48,14 @@
 #clock-date {
     bottom:-2vh;
     left:2vh;
-    font-size:8vh;
+    font-size:7vh;
     line-height:0;
 }
 
 #clock-dotw {
     bottom:24.5vh;
     left:2vh;
-    font-size:8vh;
+    font-size:7vh;
     line-height:0;
 }
 
